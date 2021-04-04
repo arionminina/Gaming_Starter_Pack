@@ -20,8 +20,8 @@ print("""
         |Origin(EA) = origin                 | // Windows and Mac only
         |Bethesda Launcher = bethesda        | // Windows only     
         |____________________________________|\n
-        Note: All platform and region names are written in lowercase
-        Second Note: GOG Galaxy for MACOS is saved in .pkg file. It cannot be depackaged inside the script.
+        
+        Note: GOG Galaxy for MACOS is saved in .pkg file. It cannot be depackaged inside the script.
 """)
 
 download = input("Enter the launcher value you want to download:").lower()
