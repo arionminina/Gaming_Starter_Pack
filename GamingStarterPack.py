@@ -21,7 +21,7 @@ print("""
         |Bethesda Launcher = bethesda        | // Windows only     
         |____________________________________|\n
         
-        Note: GOG Galaxy for MACOS is saved in .pkg file. It cannot be depackaged inside the script.
+        Note: MACOS and Linux files can't be auto opened. Sorry if you need to have faster access to those files.
 """)
 
 download = input("Enter the launcher value you want to download:").lower()
@@ -50,11 +50,11 @@ if download == "steam":
     elif platform == "linux":
             url = linuxurls[0]
             Request(url, 'steam.deb')
-            os.system('sudo dpkg filename.deb')
+            
     elif platform == "macos":
                 url = macosurls[0]
                 Request(url, 'steam.dmg')
-                os.system('steam.dmg')
+                
   
     
 
@@ -91,7 +91,7 @@ if download == "lol":
         region = input("Enter your region:").lower() + '.zip'
         url = macosurls[1] + region
         Request(url, 'LOLInstaller.zip')
-        os.system('LOLInstaller.zip')
+        
 
 if download == "battle.net":
     if platform == "windows":
@@ -101,7 +101,7 @@ if download == "battle.net":
     elif platform == "macos":
         url = macosurls[2]
         Request(url, 'BattleNetMac.zip')
-        os.system('BattleNetMac.zip')
+        
 
 if download == "gog":
     if platform == "windows":
@@ -121,7 +121,7 @@ if download == "origin":
     elif platform == "macos":
         url = macosurls[4]
         Request(url, 'Origin.dmg')
-        os.system('Origin.dmg')
+        
 
 elif download == "bethesda":
     url = windowsurls[9]
