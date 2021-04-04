@@ -30,17 +30,16 @@ linuxurls = ["https://cdn.akamai.steamstatic.com/client/installer/steam.deb"]
 
 macosurls = ["https://cdn.akamai.steamstatic.com/client/installer/steam.dmg"]
 
-if download == "steam" and platform == "windows":
-    url = windowsurls[0]
-    Request(url, 'SteamSetup.exe')
-   
-elif download == "steam" and platform == "linux":
-    url = linuxurls[0]
-    Request(url, 'steam.deb')
-
-elif download == "steam" and platform == "macos":
-    url = macosurls[0]
-    Request(url, 'steam.dmg')
+if download == "steam":
+   if platform == "windows":
+       url = windowsurls[0]
+       Request(url, 'SteamSetup.exe')
+   elif platform == "linux":
+      url = linuxurls[0]
+      Request(url, 'steam.deb')
+  elif platform == "macos":
+      url = macosurls[0]
+      Request(url, 'steam.dmg')
     
 
     
