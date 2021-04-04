@@ -76,19 +76,19 @@ elif download == "rockstar":
     os.system('RockstarGamesLauncher.exe')
 
 elif download == "val":
-    region = input("Enter your region:") + '.exe'
+    region = input("Enter your region:").lower() + '.exe'
     url = windowsurls[4] + region
     Request(url, 'Valorant.exe')
     os.system('Valorant.exe')
 
 if download == "lol":
     if platform == "windows":
-        region = input("Enter your region:") + '.exe'
+        region = input("Enter your region:").lower() + '.exe'
         url = windowsurls[5] + region
         Request(url, 'LOLInstaller.exe')
         os.system('LOLInstaller.exe')
     elif platform == "macos":
-        region = input("Enter your region:") + '.zip'
+        region = input("Enter your region:").lower() + '.zip'
         url = macosurls[1] + region
         Request(url, 'LOLInstaller.zip')
         os.system('LOLInstaller.zip')
